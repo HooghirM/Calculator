@@ -9,51 +9,27 @@
 • Handle decimal numbers. */
 
 
-/* I have the script src for this file in display.html so 
-I can run in browser instead of using node.js */
+                /* Random number generator */
     document.addEventListener('click', function(event) {
        if (event.target.id === 'Random') { // Check if the clicked element has the ID 'Random'
            // Your logic here
            let randomNumber1 = Math.floor(Math.random() * 9) +1
            let randomNumber2 = Math.floor(Math.random() * 9) +1
 
-           alert(randomNumber1)
-           alert(randomNumber2)
-           
-
+        FirstNumber(`1st number: ${randomNumber1}`)
+        SecondNumber(`2nd number: ${randomNumber2}`)
+        
            console.log('Random button clicked');
        }
        }); 
- 
 
-/*On click for Random Digit generator (Can't use document.getElementById
-Because it used a DOM & "node calculator.js doesn't have DOM access" */
-// document.getElementById('Random').onclick = function(randomNumber1, randomNumber2){
-    // When button clicked
-    // Generate random number 1 in 1st number:
-    // Generate random number 2 in 2nd number:
+    function FirstNumber(randomNum){
+        document.getElementById('1stNumber').textContent = randomNum
+    }
 
-    // Random number 1/2 instantiated and assigned 0 to start as a value
-//     let randomNumber1 = 0
-//     let randomNumber2 = 0
-
-    // Math.random() * 10
-//     alert(Math.random() * 9)
-
-    // Generate random number 1 and 2 (BEST OPTION I THINK)
-//     alert(randomNumber1 = (Math.random() * 9))
-//     alert(randomNumber2 = (Math.random() * 9))
-
-
-    // Display random number 1 and 2 in the input fields
-//      $(h1.Random).text(randomNumber1)
-//      $(h1.Random).text(randomNumber2)
-
-     
-    // $(h1.Random).data('randomNumber', randomNumber1)
-    // $(h1.Random).data('randomNumber2', randomNumber2)
-
-
+    function SecondNumber(randomNum){
+        document.getElementById('2ndNumber').textContent = randomNum
+    }
 
 
   document.getElementById('Arithmetic').onclick = function(e){
