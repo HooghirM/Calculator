@@ -8,34 +8,52 @@
 • Clear the display and reset the calculator state when the user clicks the clear button.
 • Handle decimal numbers. */
 
-// On click for Random Digit generator
-document.getElementById('Random').onclick = function(e){
+
+/* I have the script src for this file in display.html so 
+I can run in browser instead of using node.js */
+    document.addEventListener('click', function(event) {
+       if (event.target.id === 'Random') { // Check if the clicked element has the ID 'Random'
+           // Your logic here
+           let randomNumber1 = 0
+           let randomNumber2 = 0
+
+           alert(randomNumber1 = (Math.random() * 9))
+           alert(randomNumber2 = (Math.random() * 9))
+
+           console.log('Random button clicked');
+       }
+       }); 
+ 
+
+/*On click for Random Digit generator (Can't use document.getElementById
+Because it used a DOM & "node calculator.js doesn't have DOM access" */
+// document.getElementById('Random').onclick = function(randomNumber1, randomNumber2){
     // When button clicked
     // Generate random number 1 in 1st number:
     // Generate random number 2 in 2nd number:
 
     // Random number 1/2 instantiated and assigned 0 to start as a value
-    let randomNumber1 = 0
-    let randomNumber2 = 0
+//     let randomNumber1 = 0
+//     let randomNumber2 = 0
 
     // Math.random() * 10
-    // alert(Math.random() * 9)
+//     alert(Math.random() * 9)
 
-    // Generate random number 1 and 2
-    randomNumber1 = (Math.random() * 9)
-    randomNumber2 = (Math.random() * 9)
+    // Generate random number 1 and 2 (BEST OPTION I THINK)
+//     alert(randomNumber1 = (Math.random() * 9))
+//     alert(randomNumber2 = (Math.random() * 9))
 
 
     // Display random number 1 and 2 in the input fields
-     $(h1.Random).text(randomNumber1)
-     $(h1.Random).text(randomNumber2)
+//      $(h1.Random).text(randomNumber1)
+//      $(h1.Random).text(randomNumber2)
 
      
     // $(h1.Random).data('randomNumber', randomNumber1)
     // $(h1.Random).data('randomNumber2', randomNumber2)
 
 
-  }
+
 
   document.getElementById('Arithmetic').onclick = function(e){
         // Randomly generate arithmetic operator
