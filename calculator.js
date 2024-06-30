@@ -36,11 +36,80 @@
     }
 
 
-  document.getElementById('Arithmetic').onclick = function(e){
+    // FUNCTION TO GENERATE RANDOM ARITHMETIC OPERATOR
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'Arithmetic') {
+
+        // Variables for arithmetic operators
+        let add = '+'
+        let subtract = '-'
+        let multiply = '*'  
+        let divide = '/'    
+
+        // Array of arithmetic operators
+        let operators = [add, subtract, multiply, divide]
+
         // Randomly generate arithmetic operator
+        for (let index = 0; index < operators.length; index++) {
+            
+            /*  */
+        }
+    }
+});
+
+//         for (let i = 0; i < operators.length; i ++) {
+//             if (operators[i] === add) {
+//             } else if (operators[i] === subtract) {
+//             } else if (operators[i] === multiply) {
+//             } else {
+//             operators[i] === divide
+//             }
+//         }
+//     }
+// });
+            
+            // let randomOperator = operators[Math.floor(Math.random() * operators.length)]
+            // document.getElementById('Arithmetic').textContent = randomOperator
+
+            // randomOperator(`Arithmetic operator: ${operators}`)
+
+    //     }
 
 
-  }
+
+        
+
+
+    //     }
+    // });
+
+//   document.getElementById('Arithmetic').onclick = function(e){
+//         // Randomly generate arithmetic operator
+
+
+
+
+        // Varibles containing arithmetic operators
+        // let add = '+'
+        // let subtract = '-'  
+        // let multiply = '*'
+        // let divide = '/'  
+        
+        // if (add){
+        //     document.getElementById('Arithmetic').textContent = add
+        // } else if {
+        //     document.getElementById('Arithmetic').textContent = subtract
+        // } else if {
+        //     document.getElementById('Arithmetic').textContent = multiply
+        // } else {
+        //     document.getElementById('Arithmetic').textContent = divide
+        // }
+
+        // // Array of arithmetic operators
+        // let operators = [add, subtract, multiply, divide]
+
+
+    // }   
 
   document.getElementById('Calculate').onclick = function(e){
          // Calculate the current inputs using both random numbers and arithmetic operator 
