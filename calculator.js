@@ -12,10 +12,12 @@
                 /* Random number generator */
     document.addEventListener('click', function(event) {
        if (event.target.id === 'Random') { // Check if the clicked element has the ID 'Random'
-           // Your logic here
+          
+        // Varibles containing random numbers between 1 and 9
            let randomNumber1 = Math.floor(Math.random() * 9) +1
            let randomNumber2 = Math.floor(Math.random() * 9) +1
 
+        // Display the random numbers in the input fields
         FirstNumber(`1st number: ${randomNumber1}`)
         SecondNumber(`2nd number: ${randomNumber2}`)
         
@@ -23,12 +25,14 @@
        }
        }); 
 
-    function FirstNumber(randomNum){
-        document.getElementById('1stNumber').textContent = randomNum
+       // Sets HTML element w/ ID of 1stNumber to value of param randomNum 
+    function FirstNumber(randomNumber1){
+        document.getElementById('1stNumber').textContent = randomNumber1
     }
 
-    function SecondNumber(randomNum){
-        document.getElementById('2ndNumber').textContent = randomNum
+    // Sets HTML element w/ ID of 2ndNumber to value of param randomNum
+    function SecondNumber(randomNumber2){
+        document.getElementById('2ndNumber').textContent = randomNumber2
     }
 
 
