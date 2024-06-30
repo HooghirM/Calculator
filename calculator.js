@@ -14,11 +14,12 @@ I can run in browser instead of using node.js */
     document.addEventListener('click', function(event) {
        if (event.target.id === 'Random') { // Check if the clicked element has the ID 'Random'
            // Your logic here
-           let randomNumber1 = 0
-           let randomNumber2 = 0
+           let randomNumber1 = Math.floor(Math.random() * 9) +1
+           let randomNumber2 = Math.floor(Math.random() * 9) +1
 
-           alert(randomNumber1 = (Math.random() * 9))
-           alert(randomNumber2 = (Math.random() * 9))
+           alert(randomNumber1)
+           alert(randomNumber2)
+           
 
            console.log('Random button clicked');
        }
