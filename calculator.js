@@ -8,6 +8,11 @@
 • Clear the display and reset the calculator state when the user clicks the clear button.
 • Handle decimal numbers. */
 
+/* Add button on calculator that stores the last result.
+Upon clicking you can store the last number... OR
+Have a list for the last number for the 2nd most recent, 3rd... however
+make another button */
+
 
                 /* Random number generator */
     document.addEventListener('click', function(event) {
@@ -25,6 +30,8 @@
        }
        }); 
 
+
+       /* MAYBE PUT THESE IN RANDOM ON CLICK FUNCTIONs*/
        // Sets HTML element w/ ID of 1stNumber to value of param randomNum 
     function FirstNumber(randomNumber1){
         document.getElementById('1stNumber').textContent = randomNumber1
@@ -51,11 +58,33 @@
 
         // Randomly generate arithmetic operator
         for (let index = 0; index < operators.length; index++) {
-            
-            /*  */
+            let randomOperator = operators[Math.floor(Math.random() * operators.length)]
+            document.getElementById('Arithmetic').textContent = `Arithmetic operator: ${randomOperator}`         
         }
     }
 });
+//             if (index === add){
+//                 document.getElementById('Arithmetic').textContent = add 
+//             } else if (index === subtract){
+//                 document.getElementById('Arithmetic').textContent = subtract
+//             } else if (index === multiply){
+//                 document.getElementById('Arithmetic').textContent = multiply
+//             } else {
+//                 document.getElementById('Arithmetic').textContent = divide
+//             }
+//         }
+//     }
+// });
+
+//             } else (index === subtract || multiply || divide);{
+//                 document.getElementById('Arithmetic').textContent = subtract || multiply || divide
+
+//             /*  */
+//         }
+//     }
+// }
+// });
+    
 
 //         for (let i = 0; i < operators.length; i ++) {
 //             if (operators[i] === add) {
