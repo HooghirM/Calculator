@@ -19,31 +19,117 @@ make another button */
 // Click calculate button to calculate the result
 // Clear button to clear the input fields
 
-document.addEventListener('click', function(event) {
-           if (event.target.id === '0') {
-
-            /*                  What i need to do            */
+ /*                  What i need to do for input fields           */
+            // Need to track the input field selected
             // if id = '1stNumField'
             // then display 0 when clicked in 1stNumField
             // else id is 2ndNumField
             // then display 0 when clicked in 2ndNumField
 
-            
-
-            // if (document.getElementById('0').textContent === '0') {
-            //     document.getElementById('1stNumField').textContent = '0'
-            // }
 
 
+let lastSelectedInput;
 
-            // if (event.target.id === '1stNumField') {
-            //     document.getElementById('1stNumField').textContent = '0'
-            // } else if (event.target.id === '2ndNumField') {
-            //     document.getElementById('2ndNumField').textContent = '0'
-            // }
+/* Focus event tracks the last input field that was selected... ie "gained focus" 
+for input field 1 & 2 */
+document.getElementById('1stNumField').addEventListener('focus', function() {
+        lastSelectedInput = this;
+});
 
-           }
-        });
+document.getElementById('2ndNumField').addEventListener('focus', function() {
+        lastSelectedInput = this;
+});
+
+
+document.addEventListener('click', function(event) {
+        if (event.target.id === 'zero') {
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'one') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'two') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'three') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+    
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'four') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'five') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'six') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'seven') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'eight') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'nine') { 
+            if (lastSelectedInput) {
+                // Update the value of the last selected input field with the button's value
+                lastSelectedInput.value += event.target.textContent;
+            }
+        }
+    });
 
 
 
@@ -149,5 +235,5 @@ document.addEventListener('click', function(event) {
 //          // Clear the results and input section
 
 
-//   }
-// });
+//    }
+                // });  
