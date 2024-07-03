@@ -31,7 +31,7 @@ make another button */
 let lastSelectedInput;
 
 /* Focus event tracks the last input field that was selected... ie "gained focus" 
-for input field 1 & 2 */
+for input field 1 & 2 & op */
 document.getElementById('1stNumField').addEventListener('focus', function() {
         lastSelectedInput = this;
 });
@@ -40,6 +40,12 @@ document.getElementById('2ndNumField').addEventListener('focus', function() {
         lastSelectedInput = this;
 });
 
+document.getElementById('opField').addEventListener('focus', function() {
+        lastSelectedInput = this;
+});
+
+
+/* Number clicks */
 
 document.addEventListener('click', function(event) {
         if (event.target.id === 'zero') {
@@ -131,6 +137,84 @@ document.addEventListener('click', function(event) {
         }
     });
 
+
+    /* Arithmetic operations */
+
+document.addEventListener('click', function(event) {
+        if (event.target.id === 'Plus') {
+                if (lastSelectedInput) {
+                lastSelectedInput.value = '+';
+                }
+        }
+});
+
+document.addEventListener('click', function(event) {
+        if (event.target.id === 'Minus') {
+                if (lastSelectedInput) {
+                lastSelectedInput.value = '-';
+                }
+        }
+});
+
+document.addEventListener('click', function(event) {
+        if (event.target.id === 'Multiply') {
+                if (lastSelectedInput) {
+                lastSelectedInput.value = '*';
+                }
+        }
+});
+
+document.addEventListener('click', function(event) {
+        if (event.target.id === 'Divide') {
+                if (lastSelectedInput) {
+                lastSelectedInput.value = '/';
+                }
+        }
+});
+
+
+
+//     document.addEventListener('click', function(event) {
+//         if (event.target.id === 'Plus') {
+//             const display = document.getElementById('opField');
+//             if (display) {
+//                 display.textContent += '+';
+            
+//             }
+//         }
+// });
+
+
+
+
+//     function plus () {
+        
+//         // if (lastSelectedInput) {
+//         //     lastSelectedInput.value = event.target.textContent;
+//         // }
+//     }
+
+
+//     document.addEventListener('click', function(event) {
+//         if (event.target.id === 'plus') {
+
+//                 if (lastSelectedInput) {
+                        
+//                 }
+//                 // if(lastSelectedInput) {
+//                 //         lastSelectedInput.value = event.target.textContent;
+//                 // }
+                
+                
+                
+
+//                 // if (lastSelectedInput) {
+//                 //         // Update the value of the last selected input field with the button's value
+//                 //         lastSelectedInput.value = '+';
+            
+//             }
+//         });
+//         // });
 
 
 
