@@ -196,18 +196,25 @@ document.addEventListener('click', function(event) {
             } else if (operator === '-') {
                 result = num1 - num2;
                 console.log(result)
+                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else if (operator === "*") {
                 result = num1 * num2;
                 console.log(result)
+                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else if (operator === '/') {
                 result = num1 / num2;
                 console.log(result)
+                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else {
                 result = "Invalid operation"
                 console.log(result)
+                document.getElementById('currentResult').textContent = `Current result: ${result}`
             }
         }
     });
+
+
+    // Clear button functionality
     document.addEventListener('click', function(event) {
         if (event.target.id === 'Clear') {
             document.getElementById('1stNumField').value = '';
