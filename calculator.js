@@ -208,6 +208,14 @@ document.addEventListener('click', function(event) {
             }
         }
     });
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'Clear') {
+            document.getElementById('1stNumField').value = '';
+            document.getElementById('2ndNumField').value = '';
+            document.getElementById('opField').value = '';
+            document.getElementById('currentResult').textContent = '';
+        }
+    });
 
             // const num1 = parseFloat(document.getElementById('1stNumField').value);
             // const num2 = parseFloat(document.getElementById('2ndNumField').value);
