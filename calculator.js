@@ -172,6 +172,85 @@ document.addEventListener('click', function(event) {
         }
 });
 
+// Variables for calculate function
+let num1
+let num2
+let operator
+let result
+
+// Calculate function
+document.addEventListener('click', function(event) {
+        if (event.target.id === 'Calculate') {
+      
+            num1 = parseInt(document.getElementById('1stNumField').value);
+            console.log(num1)
+            num2 = parseInt(document.getElementById('2ndNumField').value);
+            console.log(num2)
+            operator = document.getElementById('opField').value;
+            console.log(operator)
+
+            if (operator === '+') {
+                result = num1 + num2;
+                console.log(result)
+                document.getElementById('currentResult').textContent = `Current result: ${result}`
+            } else if (operator === '-') {
+                result = num1 - num2;
+                console.log(result)
+            } else if (operator === "*") {
+                result = num1 * num2;
+                console.log(result)
+            } else if (operator === '/') {
+                result = num1 / num2;
+                console.log(result)
+            } else {
+                result = "Invalid operation"
+                console.log(result)
+            }
+        }
+    });
+
+            // const num1 = parseFloat(document.getElementById('1stNumField').value);
+            // const num2 = parseFloat(document.getElementById('2ndNumField').value);
+            // const operation = document.getElementById('opField').value;
+
+            // let result
+
+            // switch (operation) {
+            //     case '+':
+            //     result = num1 + num2;
+            //     break;
+            //     case '-':
+            //     result = num1 - num2;
+            //     case '*':
+            //     result = num1 * num2;
+            //     case '/':
+            //     result = num1 / num2;
+            //         if (num2 !== 0) {
+            //             result = num1 / num2;
+            //         } else {
+            //             result = 'Error: Division by zero'
+            //         } 
+            //         break;
+            //     default:
+            //             result = 'Invalid operation'
+
+            // }
+            // document.getElementById('resultField').textContent = result.toString();
+                
+       
+
+            // if (lastSelectedInput === '+') {
+            //     return randomNumber1 + randomNumber2;
+            // } else if (lastSelectedInput === '-') {
+            //     return randomNumber1 - randomNumber2;
+            // } else if (lastSelectedInput === '*') {
+            //     return randomNumber1 * randomNumber2;
+            // } else if (lastSelectedInput === '/') {
+            //     return randomNumber1 / randomNumber2;
+            //     // console.log('Calculate button clicked');
+            // }
+    
+
 
 
 //     document.addEventListener('click', function(event) {
