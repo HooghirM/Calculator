@@ -242,22 +242,22 @@ document.addEventListener('click', function(event) {
     
 
     // Square root functionality
-
-    document.addEventListener('Click', function(event) {
+    document.addEventListener('click', function(event) {
         if (event.target.id === "squareRoot") {
-
-            // Retrieve current value of input fields using .value and parses to an int for numbers
-            num1 = parseInt(document.getElementById('1stNumField').value);
-            num2 = parseInt(document.getElementById('2ndNumField').value);
-            operator = document.getElementById('opField').value;
-            // let squareRootNum = parseInt(document.getElementById('1stNumField').value);
-            let result = Math.sqrt(squareRootNum);
-            // document.getElementById('currentResult').textContent = `Current result: ${result}`;
-
+            
+                num1 = parseInt(document.getElementById('1stNumField').value);
+                console.log(num1)
+                let result = Math.sqrt(num1);
+                console.log(result)
+                document.getElementById('currentResult').textContent = `Current result: ${result.toLocaleString}`;
+                console.log(result)
             
         }
     });
 
+    /* Exponent functionality */
+
+        
 
     
 
