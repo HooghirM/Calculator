@@ -28,6 +28,14 @@ make another button */
 
 
 
+
+// Variables for calculate function
+let num1
+let num2
+let operator
+let result
+
+// Variable for tracking last input field selected
 let lastSelectedInput;
 
 /* Focus event tracks the last input field that was selected... ie "gained focus" 
@@ -138,6 +146,11 @@ document.addEventListener('click', function(event) {
     });
 
 
+    /* Add commas for 1st & 2nd numbers */
+
+
+
+
     /* Arithmetic operations */
 
 document.addEventListener('click', function(event) {
@@ -172,16 +185,17 @@ document.addEventListener('click', function(event) {
         }
 });
 
-// Variables for calculate function
-let num1
-let num2
-let operator
-let result
+// // Variables for calculate function
+// let num1
+// let num2
+// let operator
+// let result
 
 // Calculate function
 document.addEventListener('click', function(event) {
         if (event.target.id === 'Calculate') {
       
+            // Retrieve current value of input fields using .value and parses to an int for numbers
             num1 = parseInt(document.getElementById('1stNumField').value);
             console.log(num1)
             num2 = parseInt(document.getElementById('2ndNumField').value);
@@ -191,28 +205,25 @@ document.addEventListener('click', function(event) {
 
             if (operator === '+') {
                 result = num1 + num2;
-                console.log(result)
-                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else if (operator === '-') {
                 result = num1 - num2;
-                console.log(result)
-                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else if (operator === "*") {
                 result = num1 * num2;
-                console.log(result)
-                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else if (operator === '/') {
                 result = num1 / num2;
-                console.log(result)
-                document.getElementById('currentResult').textContent = `Current result: ${result}`
             } else {
                 result = "Invalid operation"
-                console.log(result)
-                document.getElementById('currentResult').textContent = `Current result: ${result}`
+                
             }
+
+            let formattedResult = result.toLocaleString() // For commas in numbers
+            console.log(formattedResult)
+            document.getElementById('currentResult').textContent = `Current result: ${formattedResult}` 
+            // Logic error may be on this line as well for clearing "Current result:"
+
         }
     });
-
+3
 
     // Clear button functionality
     document.addEventListener('click', function(event) {
@@ -220,9 +231,36 @@ document.addEventListener('click', function(event) {
             document.getElementById('1stNumField').value = '';
             document.getElementById('2ndNumField').value = '';
             document.getElementById('opField').value = '';
-            document.getElementById('currentResult').textContent = '';
+            document.getElementById('currentResult').textContent = ''; /*When clicking clear 2nd
+             time, it clears "Current result:*/
         }
     });
+
+    /* Add square root and exponents 
+    Square roort -> use built in Math.sqrt() method
+    Exponent -> */
+    
+
+    // Square root functionality
+
+    document.addEventListener('Click', function(event) {
+        if (event.target.id === "squareRoot") {
+
+            // Retrieve current value of input fields using .value and parses to an int for numbers
+            num1 = parseInt(document.getElementById('1stNumField').value);
+            num2 = parseInt(document.getElementById('2ndNumField').value);
+            operator = document.getElementById('opField').value;
+            // let squareRootNum = parseInt(document.getElementById('1stNumField').value);
+            let result = Math.sqrt(squareRootNum);
+            // document.getElementById('currentResult').textContent = `Current result: ${result}`;
+
+            
+        }
+    });
+
+
+    
+
 
             // const num1 = parseFloat(document.getElementById('1stNumField').value);
             // const num2 = parseFloat(document.getElementById('2ndNumField').value);
