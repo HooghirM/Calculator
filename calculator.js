@@ -256,7 +256,19 @@ document.addEventListener('click', function(event) {
     });
 
     /* Exponent functionality */
+    document.addEventListener('click', function(event) {
+        if (event.target.id === "Exponent") {
+            num1 = parseInt(document.getElementById('1stNumField').value);
+                console.log(num1)
+            num2 = parseInt(document.getElementById('2ndNumField').value)
+                console.log(num2)
+            let result = num1 ** num2
+            console.log(result)
+            document.getElementById('currentResult').textContent = `Current result: ${result.toLocaleString()}`;
+            console.log(result)
 
+        }
+        })
         
 
     
